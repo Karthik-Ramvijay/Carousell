@@ -19,10 +19,11 @@ Assumptions:
  I assume the app contains two Major Parts:
 
 		1. First Part:
-			1.1. Submit the Topic to add it to the Input Table by clicking the Submit Topic Button.s
+			1.1. Submit the Topic to add it to the Input Table by clicking the Submit Topic Button. Topic characters are limited in text area to 255.
 			1.2. Give Voting, users may give upvote or downvote for the added topic
 		2. Second Part:
 			User has to click the Done Voting Button to view the topic that contains more votes.
+		3. I have focussed on webflow and Logic rather than UI as specified.
 
 
 Technology Choice:
@@ -36,3 +37,10 @@ Reasons for choosing Bottle Framework:
 	2. This microframework facilitates receiving an HTTP request, routing the HTTP request to the appropriate controller and it is contrasted with Full Stack Framework or Enterprise Framework.
 	3. It's Simple framework and Secured. 
 	4. Requirement of this application needs no relational database and it needs the inbuilt data structure to process the data, In bottle framework, it is easier to route the page, making calls the application using Get and Post Methods.
+
+
+Features of Code:
+
+1. Although the requirement is simple to make reddit clone web app by submitting topic, voting the topic and osrting it. I have taken extra efforts to make the flow completely asynchronously.
+
+2. This App is built is single page layout and all the process will take place in single page itself. It makes easy access to the User.

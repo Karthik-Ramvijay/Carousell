@@ -1,6 +1,7 @@
 __author__ = 'karthikwitty'
 
 from bottle import run,route,template,request,static_file
+from prettytable import PrettyTable
 
 mydict={}
 HOST='localhost'

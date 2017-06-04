@@ -1,6 +1,6 @@
 __author__ = 'karthikwitty'
 
-from bottle import run,route,template
+from bottle import run,route,template,request,static_file
 
 mydict={}
 HOST='localhost'
@@ -12,6 +12,7 @@ def server_static(filepath):
 @route('/')
 def index():
    return template('index.tpl',rows=mydict)
+
 
 if __name__ == '__main__':
     run(host=HOST,debug=True,reloader=True)

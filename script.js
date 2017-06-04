@@ -1,5 +1,5 @@
 $(function(){
-
+	var btn_click=0;
 	$('#Submit_Topic').click(function(e) {
                 e.preventDefault();
             var txt = $('#topictxt').val();

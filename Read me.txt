@@ -1,0 +1,9 @@
+Coding Challenge Description:
+
+This coding challenge comprises the task to create the Reddit or Git hub Clone.
+
+The Web-App should contains the Following Features:
+
+1. Users can Submit the Topic which not more than 255 characters.
+2. Users can give Upvote or Downvote for the Particular Topic.
+3. App Should give the topic which contains more votes in descending order of first 20 topics.

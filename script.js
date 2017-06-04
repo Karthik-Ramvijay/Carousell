@@ -7,6 +7,27 @@ $(function(){
                 alert("Topic Field cannot be Empty");
                 return false;
             }
+             else
+            {
+
+                $.ajax({
+                    url: '/',
+                    type: 'POST',
+                    data: $('form').serialize(),
+
+                    success: function (response) {
+                        $('#topictxt').val('');
+                        $('#nrml tr:last').after(response);
+
+                    },
+
+                    error: function (error) {
+                        console.log(error);
+                    }
+
+                });
+            }
 
     });
+    
 });

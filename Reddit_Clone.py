@@ -34,6 +34,10 @@ def post():
 
             return table_content
 
+        else:
+            output=template('index.tpl',rows=mydict)
+            return output
+
 
 if __name__ == '__main__':
     run(host=HOST,debug=True,reloader=True)

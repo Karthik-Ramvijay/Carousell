@@ -8,6 +8,23 @@ The Web-App should contains the Following Features:
 2. Users can give Upvote or Downvote for the Particular Topic.
 3. App Should give the topic which contains more votes in descending order of first 20 topics.
 
+Restrictions:
+1. Should not use Relational Database.
+2. Should be focussed on Functionality rather than UI.
+
+
+Assumptions and Scenarios for the App which I made:
+
+Assumptions:
+ I assume the app contains two Major Parts:
+
+		1. First Part:
+			1.1. Submit the Topic to add it to the Input Table by clicking the Submit Topic Button.s
+			1.2. Give Voting, users may give upvote or downvote for the added topic
+		2. Second Part:
+			User has to click the Done Voting Button to view the topic that contains more votes.
+
+
 Technology Choice:
 
 1. For this challenge, I decided to make a web app in single page. So, for developing the Single Page application, I decided to use technologies like HTML, CSS, JS, JQuery(Basic Level).

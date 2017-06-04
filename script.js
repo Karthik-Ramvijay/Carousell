@@ -55,7 +55,7 @@ $(function(){
 	        $('[name="'+id+'"]').val(counter);
 
 	});
-	
+
 	$('body').on('click','#sort_btn',function(e){
 		        e.preventDefault();
 		        btn_click+=1;
@@ -67,7 +67,22 @@ $(function(){
 		            var value=$('[name="'+count_id+'"]').val();
 		            dictionary[count_id]=value;
 		        });
+		        $.ajax({
+		                url:'/sorting',
+		                type:'POST',
+		                data:dictionary,
+		                success: function(response){
+		                    $('#ajaxresponse').html(response);
+		                },
+		                error: function (error) {
+		                    console.log(error);
 
+		                }
+
+
+		        });
+
+    	});
 
   
 

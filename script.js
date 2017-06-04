@@ -55,6 +55,18 @@ $(function(){
 	        $('[name="'+id+'"]').val(counter);
 
 	});
+	
+	$('body').on('click','#sort_btn',function(e){
+		        e.preventDefault();
+		        btn_click+=1;
+		        dictionary={};
+		        dictionary['click']=btn_click;
+		        $('#nrml tr:gt(1)').each(function(index,element){
+		            var first=$(this).find('td').eq(2).html();
+		            var count_id=$(first).attr("id");
+		            var value=$('[name="'+count_id+'"]').val();
+		            dictionary[count_id]=value;
+		        });
 
 
   

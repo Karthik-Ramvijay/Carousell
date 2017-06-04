@@ -1,7 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Reddit Clone</title>
+		<style type="text/css">
+			
+			table{
+				  width: 95%;
+				  empty-cells: hide;
+
+			}
+			td:hover{
+				background: #c8ccc9;
+			}
+
+			div#rightdiv{
+
+				float:right; 
+				width: 50%;
+			}
+			div#ajaxresponse{
+
+				float:left; 
+				width: 50%;
+
+			}
+		</style>
+
 </head>
 <script type="text/javascript" src ="static/jquery-3.2.1.min.js" ></script>
 <script type="text/javascript" src="static/script.js"></script>

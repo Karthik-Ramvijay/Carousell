@@ -7,3 +7,15 @@ The Web-App should contains the Following Features:
 1. Users can Submit the Topic which not more than 255 characters.
 2. Users can give Upvote or Downvote for the Particular Topic.
 3. App Should give the topic which contains more votes in descending order of first 20 topics.
+
+Technology Choice:
+
+1. For this challenge, I decided to make a web app in single page. So, for developing the Single Page application, I decided to use technologies like HTML, CSS, JS, JQuery(Basic Level).
+
+2. I am programming in python recent days, So I decided to use Python as my backend Programming Language. I chose Bottle Framework to give smooth webflow between Front end and Backend.
+
+Reasons for choosing Bottle Framework:
+	1. Its a Micro web Framework suited for light weighted applications.
+	2. This microframework facilitates receiving an HTTP request, routing the HTTP request to the appropriate controller and it is contrasted with Full Stack Framework or Enterprise Framework.
+	3. It's Simple framework and Secured. 
+	4. Requirement of this application needs no relational database and it needs the inbuilt data structure to process the data, In bottle framework, it is easier to route the page, making calls the application using Get and Post Methods.

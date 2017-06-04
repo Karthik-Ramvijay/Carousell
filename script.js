@@ -28,7 +28,7 @@ $(function(){
                 });
             }
 	});
-	
+
     $("body").on("click","input[class='upbutton']", function(e,add){
 			e.preventDefault();
         var id=$(this).attr("id");
@@ -41,6 +41,21 @@ $(function(){
         $('[name="'+id+'"]').val(counter);
 
 	});
+
+	$("body").on("click","input[class='downbutton']",function(e,sub){
+            e.preventDefault();
+        var id=$(this).attr("id");
+        sub=-1;
+        var value=$('[name="'+id+'"]').val();
+
+        var counter=parseInt(value,10)+sub;
+        if(counter < 0){
+            counter=0;
+        }
+        $('[name="'+id+'"]').val(counter);
+
+	});
+
 
   
 

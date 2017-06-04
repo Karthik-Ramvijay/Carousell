@@ -5,6 +5,9 @@ from bottle import run,route,template
 mydict={}
 HOST='localhost'
 
+@route('/static/<filepath>')
+def server_static(filepath):
+    return static_file(filepath, root='../Carousell')
 
 @route('/')
 def index():

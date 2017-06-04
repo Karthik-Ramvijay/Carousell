@@ -3,6 +3,8 @@
 <head>
 	<title></title>
 </head>
+<script type="text/javascript" src ="static/jquery-3.2.1.min.js" ></script>
+<script type="text/javascript" src="static/script.js"></script>
 <body>
 	<form id="form1" method="POST">
 					<center><h1>Reddit Clone</h1><br></center>

@@ -27,7 +27,21 @@ $(function(){
 
                 });
             }
+	});
+	
+    $("body").on("click","input[class='upbutton']", function(e,add){
+			e.preventDefault();
+        var id=$(this).attr("id");
+        add=1;
+        var value=$('[name="'+id+'"]').val();
+        var counter=parseInt(value,10)+add;
+        if(counter < 0){
+            counter=0;
+        }
+        $('[name="'+id+'"]').val(counter);
 
-    });
-    
+	});
+
+  
+
 });

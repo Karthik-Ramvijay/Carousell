@@ -59,6 +59,9 @@ def sort():
 
         my_list=sorted(new_list, key=lambda x:x[2],reverse=True)
         table=PrettyTable()
+        table.format=True
+        table.border=True
+        table.padding_width=2
         table.field_names=['Topic','Votes']
 
         for item in my_list[:20]:
@@ -82,6 +85,9 @@ def sort():
         my_list=sorted(new_dict.values(), key=lambda x:x[1],reverse=True)
 
         table=PrettyTable()
+        table.format=True
+        table.border=True
+        table.padding_width=2
         table.field_names=['Topic','Votes']
 
         for item in my_list[:20]:

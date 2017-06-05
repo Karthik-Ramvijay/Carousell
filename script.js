@@ -1,5 +1,7 @@
 $(function(){
 	var btn_click=0;
+
+	// button click event fot Submit Topic
 	$('#Submit_Topic').click(function(e) {
                 e.preventDefault();
             var txt = $('#topictxt').val();
@@ -29,6 +31,8 @@ $(function(){
             }
 	});
 
+	// Button Click event for Upvote
+
     $("body").on("click","input[class='upbutton']", function(e,add){
 				e.preventDefault();
 	        var id=$(this).attr("id");
@@ -41,6 +45,8 @@ $(function(){
 	        $('[name="'+id+'"]').val(counter);
 
 	});
+
+	// Button Click Event for Downvote
 
 	$("body").on("click","input[class='downbutton']",function(e,sub){
 	            e.preventDefault();
@@ -56,7 +62,9 @@ $(function(){
 
 	});
 
-	$('body').on('click','#sort_btn',function(e){
+	// Button CLick Event for Sort Button
+
+	$('body').on('click','#sort_btn',function(e){ 
 		        e.preventDefault();
 		        btn_click+=1;
 		        dictionary={};

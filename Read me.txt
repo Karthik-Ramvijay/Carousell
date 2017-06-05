@@ -44,3 +44,8 @@ Features of Code:
 1. Although the requirement is simple to make reddit clone web app by submitting topic, voting the topic and osrting it. I have taken extra efforts to make the flow completely asynchronously.
 
 2. This App is built is single page layout and all the process will take place in single page itself. It makes easy access to the User.
+
+
+Important Note!:
+
+	1. I prepared this app and tested the app in my local machine running Macintosh OS. I haven't deployed in server for this coding challenge.

@@ -42,59 +42,69 @@ def post():
 
 @route('/sorting',method=["POST"])
 def sort():
-    id=int(request.POST.get('click'))
-    name={}
-    for key,value in request.forms.items():
-        name[key]=int(value)
+        id=int(request.POST.get('click'))
+        print(id)
+        topic_list=list(mydict.values())
+        total_topics=range(1,len(topic_list)+1)
+        for topic_num,topic in zip(total_topics,topic_list):
+            cur_vote=request.POST.get('count_'+str(topic_num))
+            topic.append(int(cur_vote))
+            mydict[topic_num]=topic
+        name={}
+        for key,value in request.forms.items():
+            name[key]=int(value)
 
-    del name['click']
+        del name['click']
 
-    if id==1:
+        if id==1:
 
-        new_list=mydict.values()
-        for key in name.keys():
-            for tem in new_list:
-                if key == tem[1]:
-                    tem.append(name[key])
+            new_list=mydict.values()
+            for key in name.keys():
+                for tem in new_list:
+                    if key == tem[1]:
+                        tem.append(name[key])
 
-        my_list=sorted(new_list, key=lambda x:x[2],reverse=True)
-        table=PrettyTable()
-        table.format=True
-        table.border=True
-        table.padding_width=2
-        table.field_names=['Topic','Votes']
+            my_list=sorted(new_list, key=lambda x:x[2],reverse=True)
+            table=PrettyTable()
+            table.format=True
+            table.border=True
+            table.padding_width=2
 
-        for item in my_list[:20]:
-            table.add_row([item[0],item[2]])
+            table.field_names=['Topic','Votes']
 
-        table_html=table.get_html_string()
-        return table_html
+            for item in my_list[:20]:
+                table.add_row([item[0],item[2]])
 
-    elif id > 1:
-        new_dict={}
+            table_html=table.get_html_string()
+            return table_html
 
-        for value in mydict.values():
-            try:
-                new_dict[value[1]]=[value[0],value[2]]
-            except Exception:
-                new_dict[value[1]]=[value[0],name[value[1]]]
+        elif id > 1:
+            new_dict={}
 
-        for key in name.keys():
-            new_dict[key][1]=name[key]
+            for value in mydict.values():
+                try:
+                    new_dict[value[1]]=[value[0],value[2]]
+                except Exception:
+                    new_dict[value[1]]=[value[0],name[value[1]]]
 
-        my_list=sorted(new_dict.values(), key=lambda x:x[1],reverse=True)
+            for key in name.keys():
+                new_dict[key][1]=name[key]
 
-        table=PrettyTable()
-        table.format=True
-        table.border=True
-        table.padding_width=2
-        table.field_names=['Topic','Votes']
+            my_list=sorted(new_dict.values(), key=lambda x:x[1],reverse=True)
 
-        for item in my_list[:20]:
-            table.add_row([item[0],item[1]])
+            table=PrettyTable()
+            table.format=True
+            table.border=True
+            table.padding_width=2
 
-        table_html=table.get_html_string()
-        return table_html
+            table.field_names=['Topic','Votes']
+
+            for item in my_list[:20]:
+                table.add_row([item[0],item[1]])
+
+            table_html=table.get_html_string()
+
+            return table_html
 
 
 if __name__ == '__main__':

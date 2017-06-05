@@ -43,7 +43,6 @@ def post():
 @route('/sorting',method=["POST"])
 def sort():
         id=int(request.POST.get('click'))
-        print(id)
         topic_list=list(mydict.values())
         total_topics=range(1,len(topic_list)+1)
         for topic_num,topic in zip(total_topics,topic_list):

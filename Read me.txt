@@ -49,3 +49,4 @@ Features of Code:
 Important Note!:
 
 	1. I prepared this app and tested the app in my local machine running Macintosh OS. I haven't deployed in server for this coding challenge.
+	2. We can run this application by Issuing command " python Reddit_clone.py " from the path to Source folder.
